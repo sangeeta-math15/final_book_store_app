@@ -1,0 +1,53 @@
+INFO 2022-02-17 00:23:56,640 autoreload Watching for file changes with StatReloader 637
+WARNING 2022-02-17 00:24:09,114 log Not Found: /api/book/ 230
+WARNING 2022-02-17 00:24:09,115 basehttp "GET /api/book/ HTTP/1.1" 404 2219 161
+WARNING 2022-02-17 00:24:14,912 log Not Found: /api/book/ 230
+WARNING 2022-02-17 00:24:14,913 basehttp "GET /api/book/ HTTP/1.1" 404 2219 161
+WARNING 2022-02-17 00:24:24,538 log Not Found: /api/book/ 230
+WARNING 2022-02-17 00:24:24,538 basehttp "PUT /api/book/ HTTP/1.1" 404 2219 161
+INFO 2022-02-17 00:25:14,597 autoreload E:\BridgeLbz\CFP_Programs\Final_BookStoreApplication\BookStoreApp\BookStoreApp\urls.py changed, reloading. 251
+INFO 2022-02-17 00:25:19,430 autoreload Watching for file changes with StatReloader 637
+WARNING 2022-02-17 00:25:35,569 log Bad Request: /api/book/ 230
+WARNING 2022-02-17 00:25:35,570 basehttp "PUT /api/book/ HTTP/1.1" 400 30 161
+WARNING 2022-02-17 00:25:47,234 log Bad Request: /api/book/ 230
+WARNING 2022-02-17 00:25:47,235 basehttp "PUT /api/book/ HTTP/1.1" 400 30 161
+WARNING 2022-02-17 00:25:49,125 log Bad Request: /api/book/ 230
+WARNING 2022-02-17 00:25:49,127 basehttp "PUT /api/book/ HTTP/1.1" 400 30 161
+WARNING 2022-02-17 00:25:51,068 log Bad Request: /api/book/ 230
+WARNING 2022-02-17 00:25:51,070 basehttp "PUT /api/book/ HTTP/1.1" 400 30 161
+WARNING 2022-02-17 00:26:01,345 log Bad Request: /api/book/ 230
+WARNING 2022-02-17 00:26:01,359 basehttp "PUT /api/book/ HTTP/1.1" 400 30 161
+INFO 2022-02-17 00:30:40,897 autoreload Watching for file changes with StatReloader 637
+WARNING 2022-02-17 00:30:47,571 log Bad Request: /api/book/ 230
+WARNING 2022-02-17 00:30:47,572 basehttp "PUT /api/book/ HTTP/1.1" 400 30 161
+WARNING 2022-02-17 00:30:49,432 log Bad Request: /api/book/ 230
+WARNING 2022-02-17 00:30:49,433 basehttp "PUT /api/book/ HTTP/1.1" 400 30 161
+WARNING 2022-02-17 00:31:08,489 log Bad Request: /api/book/ 230
+WARNING 2022-02-17 00:31:08,490 basehttp "DELETE /api/book/ HTTP/1.1" 400 30 161
+WARNING 2022-02-17 00:31:11,199 log Bad Request: /api/book/ 230
+WARNING 2022-02-17 00:31:11,200 basehttp "DELETE /api/book/ HTTP/1.1" 400 30 161
+WARNING 2022-02-17 00:31:13,199 log Bad Request: /api/book/ 230
+WARNING 2022-02-17 00:31:13,224 basehttp "DELETE /api/book/ HTTP/1.1" 400 30 161
+INFO 2022-02-17 00:34:56,099 autoreload E:\BridgeLbz\CFP_Programs\Final_BookStoreApplication\BookStoreApp\book\views.py changed, reloading. 251
+INFO 2022-02-17 00:34:58,675 autoreload Watching for file changes with StatReloader 637
+WARNING 2022-02-17 00:35:08,455 log Bad Request: /api/book/ 230
+WARNING 2022-02-17 00:35:08,460 basehttp "DELETE /api/book/ HTTP/1.1" 400 30 161
+INFO 2022-02-17 00:45:06,401 autoreload Watching for file changes with StatReloader 637
+WARNING 2022-02-17 00:45:12,041 log Not Found: /api/book/ 230
+WARNING 2022-02-17 00:45:12,054 basehttp "DELETE /api/book/ HTTP/1.1" 404 2222 161
+WARNING 2022-02-17 00:45:16,293 log Not Found: /api/book/ 230
+WARNING 2022-02-17 00:45:16,294 basehttp "DELETE /api/book/ HTTP/1.1" 404 2222 161
+WARNING 2022-02-17 00:45:20,911 log Not Found: /api/book/ 230
+WARNING 2022-02-17 00:45:20,916 basehttp "DELETE /api/book/ HTTP/1.1" 404 2222 161
+WARNING 2022-02-17 00:45:26,136 log Not Found: /api/book/ 230
+WARNING 2022-02-17 00:45:26,140 basehttp "PUT /api/book/ HTTP/1.1" 404 2219 161
+INFO 2022-02-17 00:46:38,542 autoreload Watching for file changes with StatReloader 637
+WARNING 2022-02-17 00:46:44,160 log Bad Request: /api/book/ 230
+WARNING 2022-02-17 00:46:44,161 basehttp "PUT /api/book/ HTTP/1.1" 400 30 161
+INFO 2022-02-17 00:47:10,949 basehttp "POST /api/book/ HTTP/1.1" 201 229 161
+INFO 2022-02-17 00:50:47,915 basehttp "POST /api/book/ HTTP/1.1" 201 232 161
+INFO 2022-02-17 00:52:07,889 basehttp "POST /api/book/ HTTP/1.1" 201 181 161
+INFO 2022-02-17 00:52:23,625 basehttp "GET /api/book/ HTTP/1.1" 201 222 161
+INFO 2022-02-17 00:52:40,214 basehttp "DELETE /api/book/ HTTP/1.1" 204 26 161
+INFO 2022-02-17 00:52:52,665 basehttp "POST /api/book/ HTTP/1.1" 201 181 161
+INFO 2022-02-17 00:53:08,236 basehttp "POST /api/book/ HTTP/1.1" 201 232 161
