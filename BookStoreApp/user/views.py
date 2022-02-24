@@ -1,5 +1,3 @@
-
-from rest_framework.generics import GenericAPIView
 from .serializers import UserSerializer
 from rest_framework.response import Response
 from rest_framework import status
@@ -12,7 +10,6 @@ from django.contrib.auth import authenticate
 import random
 import logging
 from .models import User
-from django.conf import settings
 from .models import UserOTP
 from django.core.mail import send_mail
 from .util import Email
@@ -23,15 +20,14 @@ logger = logging.getLogger('django')
 # Create your views here.
 class RegisterView(APIView):
     """
-               This api is for registration of new user
-              @param request: username,email and password
-              @return: it will return the registered user with its credentials
+    This api is for registration of new user
     """
 
-
     def post(self, request):
+        """@param request: username,email and password
+        @return: it will return the registered user with its credentials
+        """
         try:
-
             serializer = UserSerializer(data=request.data)
             serializer.is_valid(raise_exception=True)
             user = User.objects.filter(username=serializer.data['username'])
@@ -55,7 +51,7 @@ class RegisterView(APIView):
                 [new_user.email],
                 fail_silently=False
             )
-            return Response({"Message": "OTP Sent to the user "}, status=status.HTTP_201_CREATED)
+            return Response({"message": "OTP Sent to the user "}, status=status.HTTP_201_CREATED)
         except Exception as e:
             print(e)
             return Response({"Error": "Failed to send otp"}, status=status.HTTP_400_BAD_REQUEST)
@@ -63,12 +59,15 @@ class RegisterView(APIView):
 
 class VerifyOTP(APIView):
     """
-        This api is for verification of email to this application
-       @param request: once the account verification link is clicked by user this will take that request
-       @return: it will return the response of email activation
-     """
+    create verifyOTP class
+    This api is for verification of email to this application
+    """
 
     def get(self, request):
+        """
+        :param request: once the account verification link is clicked by user this will take that request
+        :return: it will return the response of email activation
+        """
         otp = request.data.get('otp')
         print(otp)
         try:
@@ -78,7 +77,7 @@ class VerifyOTP(APIView):
                 user.is_active = True
                 user.save()
             logger.info("Email Successfully Verified")
-            return Response({'Message': 'Successfully activated'}, status=status.HTTP_200_OK)
+            return Response({'message': 'Successfully activated'}, status=status.HTTP_200_OK)
         except Exception as e:
             logger.error(e)
             return Response({'error': 'Something Went Wrong'}, status=status.HTTP_400_BAD_REQUEST)
@@ -91,6 +90,11 @@ class LoginView(APIView):
     """
 
     def post(self, request):
+        """
+
+        :param request: username and password
+        :return: login success or fail.
+        """
         try:
             user = authenticate(username=request.data.get('username'), password=request.data.get('password'))
             if user is not None:

@@ -1,53 +1,89 @@
-INFO 2022-02-17 00:23:56,640 autoreload Watching for file changes with StatReloader 637
-WARNING 2022-02-17 00:24:09,114 log Not Found: /api/book/ 230
-WARNING 2022-02-17 00:24:09,115 basehttp "GET /api/book/ HTTP/1.1" 404 2219 161
-WARNING 2022-02-17 00:24:14,912 log Not Found: /api/book/ 230
-WARNING 2022-02-17 00:24:14,913 basehttp "GET /api/book/ HTTP/1.1" 404 2219 161
-WARNING 2022-02-17 00:24:24,538 log Not Found: /api/book/ 230
-WARNING 2022-02-17 00:24:24,538 basehttp "PUT /api/book/ HTTP/1.1" 404 2219 161
-INFO 2022-02-17 00:25:14,597 autoreload E:\BridgeLbz\CFP_Programs\Final_BookStoreApplication\BookStoreApp\BookStoreApp\urls.py changed, reloading. 251
-INFO 2022-02-17 00:25:19,430 autoreload Watching for file changes with StatReloader 637
-WARNING 2022-02-17 00:25:35,569 log Bad Request: /api/book/ 230
-WARNING 2022-02-17 00:25:35,570 basehttp "PUT /api/book/ HTTP/1.1" 400 30 161
-WARNING 2022-02-17 00:25:47,234 log Bad Request: /api/book/ 230
-WARNING 2022-02-17 00:25:47,235 basehttp "PUT /api/book/ HTTP/1.1" 400 30 161
-WARNING 2022-02-17 00:25:49,125 log Bad Request: /api/book/ 230
-WARNING 2022-02-17 00:25:49,127 basehttp "PUT /api/book/ HTTP/1.1" 400 30 161
-WARNING 2022-02-17 00:25:51,068 log Bad Request: /api/book/ 230
-WARNING 2022-02-17 00:25:51,070 basehttp "PUT /api/book/ HTTP/1.1" 400 30 161
-WARNING 2022-02-17 00:26:01,345 log Bad Request: /api/book/ 230
-WARNING 2022-02-17 00:26:01,359 basehttp "PUT /api/book/ HTTP/1.1" 400 30 161
-INFO 2022-02-17 00:30:40,897 autoreload Watching for file changes with StatReloader 637
-WARNING 2022-02-17 00:30:47,571 log Bad Request: /api/book/ 230
-WARNING 2022-02-17 00:30:47,572 basehttp "PUT /api/book/ HTTP/1.1" 400 30 161
-WARNING 2022-02-17 00:30:49,432 log Bad Request: /api/book/ 230
-WARNING 2022-02-17 00:30:49,433 basehttp "PUT /api/book/ HTTP/1.1" 400 30 161
-WARNING 2022-02-17 00:31:08,489 log Bad Request: /api/book/ 230
-WARNING 2022-02-17 00:31:08,490 basehttp "DELETE /api/book/ HTTP/1.1" 400 30 161
-WARNING 2022-02-17 00:31:11,199 log Bad Request: /api/book/ 230
-WARNING 2022-02-17 00:31:11,200 basehttp "DELETE /api/book/ HTTP/1.1" 400 30 161
-WARNING 2022-02-17 00:31:13,199 log Bad Request: /api/book/ 230
-WARNING 2022-02-17 00:31:13,224 basehttp "DELETE /api/book/ HTTP/1.1" 400 30 161
-INFO 2022-02-17 00:34:56,099 autoreload E:\BridgeLbz\CFP_Programs\Final_BookStoreApplication\BookStoreApp\book\views.py changed, reloading. 251
-INFO 2022-02-17 00:34:58,675 autoreload Watching for file changes with StatReloader 637
-WARNING 2022-02-17 00:35:08,455 log Bad Request: /api/book/ 230
-WARNING 2022-02-17 00:35:08,460 basehttp "DELETE /api/book/ HTTP/1.1" 400 30 161
-INFO 2022-02-17 00:45:06,401 autoreload Watching for file changes with StatReloader 637
-WARNING 2022-02-17 00:45:12,041 log Not Found: /api/book/ 230
-WARNING 2022-02-17 00:45:12,054 basehttp "DELETE /api/book/ HTTP/1.1" 404 2222 161
-WARNING 2022-02-17 00:45:16,293 log Not Found: /api/book/ 230
-WARNING 2022-02-17 00:45:16,294 basehttp "DELETE /api/book/ HTTP/1.1" 404 2222 161
-WARNING 2022-02-17 00:45:20,911 log Not Found: /api/book/ 230
-WARNING 2022-02-17 00:45:20,916 basehttp "DELETE /api/book/ HTTP/1.1" 404 2222 161
-WARNING 2022-02-17 00:45:26,136 log Not Found: /api/book/ 230
-WARNING 2022-02-17 00:45:26,140 basehttp "PUT /api/book/ HTTP/1.1" 404 2219 161
-INFO 2022-02-17 00:46:38,542 autoreload Watching for file changes with StatReloader 637
-WARNING 2022-02-17 00:46:44,160 log Bad Request: /api/book/ 230
-WARNING 2022-02-17 00:46:44,161 basehttp "PUT /api/book/ HTTP/1.1" 400 30 161
-INFO 2022-02-17 00:47:10,949 basehttp "POST /api/book/ HTTP/1.1" 201 229 161
-INFO 2022-02-17 00:50:47,915 basehttp "POST /api/book/ HTTP/1.1" 201 232 161
-INFO 2022-02-17 00:52:07,889 basehttp "POST /api/book/ HTTP/1.1" 201 181 161
-INFO 2022-02-17 00:52:23,625 basehttp "GET /api/book/ HTTP/1.1" 201 222 161
-INFO 2022-02-17 00:52:40,214 basehttp "DELETE /api/book/ HTTP/1.1" 204 26 161
-INFO 2022-02-17 00:52:52,665 basehttp "POST /api/book/ HTTP/1.1" 201 181 161
-INFO 2022-02-17 00:53:08,236 basehttp "POST /api/book/ HTTP/1.1" 201 232 161
+INFO 2022-02-23 11:36:10,088 views Email Successfully Verified 79
+INFO 2022-02-23 11:36:10,089 basehttp "GET /api/auth/otp-verify/ HTTP/1.1" 200 36 161
+INFO 2022-02-23 12:25:01,924 autoreload Watching for file changes with StatReloader 637
+INFO 2022-02-23 12:25:10,345 autoreload E:\BridgeLbz\CFP_Programs\Final_BookStoreApplication\BookStoreApp\book\serializers.py changed, reloading. 251
+INFO 2022-02-23 12:25:12,840 autoreload Watching for file changes with StatReloader 637
+INFO 2022-02-23 12:25:54,192 autoreload E:\BridgeLbz\CFP_Programs\Final_BookStoreApplication\BookStoreApp\book\urls.py changed, reloading. 251
+INFO 2022-02-23 12:25:56,417 autoreload Watching for file changes with StatReloader 637
+INFO 2022-02-23 12:31:32,694 basehttp "POST /api/book/ HTTP/1.1" 201 202 161
+INFO 2022-02-23 12:33:36,159 basehttp "PUT /api/book/ HTTP/1.1" 201 212 161
+WARNING 2022-02-23 12:33:47,768 log Bad Request: /api/book/ 230
+WARNING 2022-02-23 12:33:47,771 basehttp "GET /api/book/ HTTP/1.1" 400 29 161
+WARNING 2022-02-23 12:33:57,454 log Bad Request: /api/book/ 230
+WARNING 2022-02-23 12:33:57,455 basehttp "GET /api/book/ HTTP/1.1" 400 29 161
+WARNING 2022-02-23 12:33:59,401 log Bad Request: /api/book/ 230
+WARNING 2022-02-23 12:33:59,402 basehttp "GET /api/book/ HTTP/1.1" 400 29 161
+INFO 2022-02-23 12:35:21,355 autoreload E:\BridgeLbz\CFP_Programs\Final_BookStoreApplication\BookStoreApp\book\views.py changed, reloading. 251
+INFO 2022-02-23 12:35:29,915 autoreload Watching for file changes with StatReloader 637
+INFO 2022-02-23 12:35:35,580 basehttp "GET /api/book/ HTTP/1.1" 201 1863 161
+WARNING 2022-02-23 12:37:18,835 log Bad Request: /api/book/ 230
+WARNING 2022-02-23 12:37:18,837 basehttp "DELETE /api/book/ HTTP/1.1" 400 30 161
+INFO 2022-02-23 12:38:10,569 autoreload E:\BridgeLbz\CFP_Programs\Final_BookStoreApplication\BookStoreApp\book\views.py changed, reloading. 251
+INFO 2022-02-23 12:38:12,960 autoreload Watching for file changes with StatReloader 637
+WARNING 2022-02-23 12:38:17,081 log Bad Request: /api/book/ 230
+WARNING 2022-02-23 12:38:17,097 basehttp "DELETE /api/book/ HTTP/1.1" 400 30 161
+WARNING 2022-02-23 12:38:19,222 log Bad Request: /api/book/ 230
+WARNING 2022-02-23 12:38:19,224 basehttp "DELETE /api/book/ HTTP/1.1" 400 30 161
+WARNING 2022-02-23 12:39:41,737 log Bad Request: /api/book/ 230
+WARNING 2022-02-23 12:39:41,738 basehttp "DELETE /api/book/ HTTP/1.1" 400 30 161
+WARNING 2022-02-23 12:39:54,505 log Bad Request: /api/book/ 230
+WARNING 2022-02-23 12:39:54,506 basehttp "DELETE /api/book/ HTTP/1.1" 400 30 161
+WARNING 2022-02-23 12:39:56,420 log Bad Request: /api/book/ 230
+WARNING 2022-02-23 12:39:56,421 basehttp "DELETE /api/book/ HTTP/1.1" 400 30 161
+INFO 2022-02-23 12:40:16,055 autoreload E:\BridgeLbz\CFP_Programs\Final_BookStoreApplication\BookStoreApp\book\views.py changed, reloading. 251
+INFO 2022-02-23 12:40:18,118 autoreload Watching for file changes with StatReloader 637
+WARNING 2022-02-23 12:40:31,242 log Bad Request: /api/book/ 230
+WARNING 2022-02-23 12:40:31,276 basehttp "DELETE /api/book/ HTTP/1.1" 400 30 161
+WARNING 2022-02-23 12:40:32,988 log Bad Request: /api/book/ 230
+WARNING 2022-02-23 12:40:33,072 basehttp "DELETE /api/book/ HTTP/1.1" 400 30 161
+WARNING 2022-02-23 12:41:16,373 log Bad Request: /api/book/ 230
+WARNING 2022-02-23 12:41:16,377 basehttp "POST /api/book/ HTTP/1.1" 400 31 161
+INFO 2022-02-23 12:46:19,580 autoreload E:\BridgeLbz\CFP_Programs\Final_BookStoreApplication\BookStoreApp\book\views.py changed, reloading. 251
+INFO 2022-02-23 12:46:22,615 autoreload Watching for file changes with StatReloader 637
+WARNING 2022-02-23 12:46:34,888 log Bad Request: /api/book/ 230
+WARNING 2022-02-23 12:46:34,889 basehttp "DELETE /api/book/ HTTP/1.1" 400 30 161
+WARNING 2022-02-23 12:46:36,867 log Bad Request: /api/book/ 230
+WARNING 2022-02-23 12:46:36,868 basehttp "DELETE /api/book/ HTTP/1.1" 400 30 161
+INFO 2022-02-23 12:48:46,968 autoreload Watching for file changes with StatReloader 637
+WARNING 2022-02-23 12:49:02,167 log Bad Request: /api/book/ 230
+WARNING 2022-02-23 12:49:02,168 basehttp "DELETE /api/book/ HTTP/1.1" 400 30 161
+INFO 2022-02-23 12:49:51,908 autoreload E:\BridgeLbz\CFP_Programs\Final_BookStoreApplication\BookStoreApp\book\views.py changed, reloading. 251
+INFO 2022-02-23 12:49:55,320 autoreload Watching for file changes with StatReloader 637
+WARNING 2022-02-23 12:49:58,330 log Bad Request: /api/book/ 230
+WARNING 2022-02-23 12:49:58,331 basehttp "DELETE /api/book/ HTTP/1.1" 400 30 161
+WARNING 2022-02-23 12:50:06,803 log Bad Request: /api/book/ 230
+WARNING 2022-02-23 12:50:06,804 basehttp "DELETE /api/book/ HTTP/1.1" 400 30 161
+WARNING 2022-02-23 12:50:08,200 log Bad Request: /api/book/ 230
+WARNING 2022-02-23 12:50:08,201 basehttp "DELETE /api/book/ HTTP/1.1" 400 30 161
+INFO 2022-02-23 13:06:19,853 autoreload E:\BridgeLbz\CFP_Programs\Final_BookStoreApplication\BookStoreApp\book\views.py changed, reloading. 251
+INFO 2022-02-23 13:06:25,153 autoreload Watching for file changes with StatReloader 637
+INFO 2022-02-23 13:07:04,221 autoreload E:\BridgeLbz\CFP_Programs\Final_BookStoreApplication\BookStoreApp\book\views.py changed, reloading. 251
+INFO 2022-02-23 13:07:07,677 autoreload Watching for file changes with StatReloader 637
+INFO 2022-02-23 13:08:29,859 basehttp "DELETE /api/book/ HTTP/1.1" 204 26 161
+WARNING 2022-02-23 13:09:29,085 log Bad Request: /api/book/ 230
+WARNING 2022-02-23 13:09:29,086 basehttp "DELETE /api/book/ HTTP/1.1" 400 30 161
+INFO 2022-02-23 13:10:25,453 autoreload E:\BridgeLbz\CFP_Programs\Final_BookStoreApplication\BookStoreApp\book\views.py changed, reloading. 251
+INFO 2022-02-23 13:10:29,650 autoreload Watching for file changes with StatReloader 637
+INFO 2022-02-23 13:10:36,045 basehttp "POST /api/book/ HTTP/1.1" 201 202 161
+INFO 2022-02-23 13:11:15,562 autoreload E:\BridgeLbz\CFP_Programs\Final_BookStoreApplication\BookStoreApp\book\views.py changed, reloading. 251
+INFO 2022-02-23 13:11:22,620 autoreload Watching for file changes with StatReloader 637
+INFO 2022-02-23 13:12:00,931 autoreload E:\BridgeLbz\CFP_Programs\Final_BookStoreApplication\BookStoreApp\book\models.py changed, reloading. 251
+INFO 2022-02-23 13:12:03,951 autoreload Watching for file changes with StatReloader 637
+WARNING 2022-02-23 13:20:15,310 log Bad Request: /api/book/ 230
+WARNING 2022-02-23 13:20:15,346 basehttp "POST /api/book/ HTTP/1.1" 400 31 161
+INFO 2022-02-24 17:33:41,037 autoreload Watching for file changes with StatReloader 637
+INFO 2022-02-24 17:39:38,240 basehttp "POST /api/auth/register/ HTTP/1.1" 201 35 161
+INFO 2022-02-24 17:41:06,893 views Email Successfully Verified 79
+INFO 2022-02-24 17:41:06,894 basehttp "GET /api/auth/otp-verify/ HTTP/1.1" 200 36 161
+INFO 2022-02-24 17:41:23,587 basehttp "GET /api/book/ HTTP/1.1" 201 928 161
+WARNING 2022-02-24 17:41:48,874 log Bad Request: /api/book/ 230
+WARNING 2022-02-24 17:41:48,923 basehttp "PUT /api/book/ HTTP/1.1" 400 30 161
+INFO 2022-02-24 17:43:17,281 autoreload E:\BridgeLbz\CFP_Programs\Final_BookStoreApplication\BookStoreApp\book\views.py changed, reloading. 251
+INFO 2022-02-24 17:43:19,752 autoreload Watching for file changes with StatReloader 637
+INFO 2022-02-24 17:43:48,112 basehttp "PUT /api/book/ HTTP/1.1" 201 213 161
+INFO 2022-02-24 17:44:02,279 basehttp "GET /api/book/ HTTP/1.1" 201 937 161
+WARNING 2022-02-24 17:45:22,014 log Bad Request: /api/book/ 230
+WARNING 2022-02-24 17:45:22,025 basehttp "POST /api/book/ HTTP/1.1" 400 31 161
+INFO 2022-02-24 17:45:36,446 basehttp "POST /api/book/ HTTP/1.1" 201 230 161
+INFO 2022-02-24 17:45:53,976 basehttp "GET /api/book/ HTTP/1.1" 201 1123 161
+INFO 2022-02-24 17:46:40,748 basehttp "DELETE /api/book/ HTTP/1.1" 204 26 161

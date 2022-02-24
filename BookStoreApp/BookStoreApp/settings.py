@@ -15,7 +15,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
@@ -27,7 +26,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 AUTH_USER_MODEL = "user.User"
-
 
 # Application definition
 
@@ -74,18 +72,19 @@ TEMPLATES = [
 WSGI_APPLICATION = 'BookStoreApp.wsgi.application'
 
 
+
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
     'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'final_book_store',
-            'USER': 'postgres',
-            'PASSWORD': 'Sang@123',
-            'HOST': 'localhost',
-            'PORT': '5432',
-        }
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'final_book_store',
+        'USER': 'postgres',
+        'PASSWORD': 'Sang@123',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
 }
 
 
@@ -107,7 +106,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
@@ -121,26 +119,22 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
 
-
 EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'sangeeta.1rn18mca30@gmail.com'
-EMAIL_HOST_PASSWORD = '9900637976'
-
-
+EMAIL_HOST_USER = os.environ.get('EMAIL_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
 
 LOGGING = {
     'version': 1,
     'loggers': {
-        'django':{
+        'django': {
             'handlers': ['file'],
             'level': 'DEBUG'
         }
@@ -153,7 +147,7 @@ LOGGING = {
             'formatter': 'simple',
 
         },
-        'console':{
+        'console': {
             'class': 'logging.StreamHandler',
             'level': 'DEBUG'
         },

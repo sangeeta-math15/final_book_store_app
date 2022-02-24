@@ -1,14 +1,15 @@
 from .serializers import BookSerializer
 from .models import Book
 from rest_framework.response import Response
-from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView, DestroyAPIView, GenericAPIView, \
-    RetrieveUpdateAPIView
 from rest_framework.views import APIView
 
-from rest_framework import permissions, status, views
+from user.models import User
+from user.serializers import UserSerializer
+from rest_framework import status, views
 import logging
-from psycopg2 import OperationalError
 from rest_framework.exceptions import ValidationError
+
+
 
 logger = logging.getLogger('django')
 
@@ -17,33 +18,29 @@ class BookView(APIView):
     """
     curd operation
     """
-
     def post(self, request):
         """
-
-        :param request:
-        :return:
+        :param request: all fields in the model
+        :return: book stored successfully or not
         """
         try:
             serializer = BookSerializer(data=request.data)
             serializer.is_valid(raise_exception=True)
             serializer.save()
-            return Response({"Message": "data store successfully", "data": serializer.data},
+            return Response({"message": "book store successfully", "data": serializer.data},
                             status=status.HTTP_201_CREATED)
         except Exception as e:
             logging.error(e)
             return Response({"message": "validation failed"}, status=status.HTTP_400_BAD_REQUEST)
 
-    def get(self, request):
-        try:
-            # print(request.GET.get("id"))
-            # book = Book.objects.filter(id = request.GET.get("id"))
-            book = Book.objects.filter(title = request.data['title'])
 
-            print(book)
-            # serializer = BookSerializer(book, many=True)
-            # book = Book.objects.all()
-            serializer = BookSerializer(book,many=True)
+    def get(self, request):
+        """
+        :return: get all books
+        """
+        try:
+            book = Book.objects.all()
+            serializer = BookSerializer(book, many=True)
             return Response(
                 {
                     "message": "Here your Book",
@@ -66,9 +63,8 @@ class BookView(APIView):
         :return: Response
         """
         try:
-            print(request.data["id"])
-            book = Book.objects.get(id=request.data["id"])
-            print(book)
+            print(request.data["title"])
+            book = Book.objects.get(title=request.data["title"])
             serializer = BookSerializer(book, data=request.data)
             serializer.is_valid(raise_exception=True)
             serializer.save()
@@ -94,8 +90,8 @@ class BookView(APIView):
         :return: response
         """
         try:
-            note = Book.objects.get(id=request.data["id"])
-            note.delete()
+            book = Book.objects.get(title=request.data["title"])
+            book.delete()
             return Response(
                 {
                     "message": "Data deleted"
@@ -108,38 +104,4 @@ class BookView(APIView):
                     "message": "Data not deleted"
                 },
                 status=status.HTTP_400_BAD_REQUEST)
-#
-# class BookView(ListCreateAPIView):
-#     serializer_class = BookSerializer
-#
-#     def perform_create(self, serializer):
-#         """
-#             This api is for creation of new books
-#             @param request: title and description of notes
-#             @return: response of created notes
-#             :param serializer:
-#             :param serializer:
-#         """
-#         try:
-#             serializer.save()
-#             return Response({'Message': 'Product Created Successfully'}, status=status.HTTP_200_OK)
-#         except OperationalError as e:
-#             logger.error(e)
-#             return Response({'Message': 'Failed to connect with the database'}, status=status.HTTP_400_BAD_REQUEST)
-#         except ValidationError as e:
-#             logger.error(e)
-#             return Response({'Message': 'Invalid Data'}, status=status.HTTP_400_BAD_REQUEST)
-#         except Exception as e:
-#             logger.error(e)
-#             return Response({'Message': 'Failed to create product'}, status=status.HTTP_400_BAD_REQUEST)
-#
-#     def get_queryset(self):
-#         try:
-#
-#             return Book.objects.all()
-#         except OperationalError as e:
-#             logger.error(e)
-#             return Response({'Message': 'Failed to connect with the database'}, status=status.HTTP_400_BAD_REQUEST)
-#         except Exception as e:
-#             logger.error(e)
-#             return Response({'Message': 'Failed to get product'}, status=status.HTTP_400_BAD_REQUEST)
+
