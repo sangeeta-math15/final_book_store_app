@@ -1,3 +1,5 @@
+import random
+import logging
 from .serializers import UserSerializer
 from rest_framework.response import Response
 from rest_framework import status
@@ -5,24 +7,21 @@ from django.conf import settings
 from django.core.mail import EmailMessage
 from django.core.mail import EmailMultiAlternatives
 from rest_framework.views import APIView
-
+from rest_framework.exceptions import AuthenticationFailed
+from django.contrib.auth.models import auth
 from django.contrib.auth import authenticate
-import random
-import logging
 from .models import User
 from .models import UserOTP
 from django.core.mail import send_mail
-from .util import Email
+from .util import Email, EncodeDecodeToken, VerifyToken
 
 logger = logging.getLogger('django')
 
 
-# Create your views here.
 class RegisterView(APIView):
     """
     This api is for registration of new user
     """
-
     def post(self, request):
         """@param request: username,email and password
         @return: it will return the registered user with its credentials
@@ -38,7 +37,6 @@ class RegisterView(APIView):
                                                 password=serializer.data['password'],
                                                 email=serializer.data['email'],
                                                 phone=serializer.data['phone'],
-
                                                 )
 
             user_otp = random.randint(100000, 999999)
@@ -62,14 +60,12 @@ class VerifyOTP(APIView):
     create verifyOTP class
     This api is for verification of email to this application
     """
-
     def get(self, request):
         """
         :param request: once the account verification link is clicked by user this will take that request
         :return: it will return the response of email activation
         """
         otp = request.data.get('otp')
-        print(otp)
         try:
             otp_obj = UserOTP.objects.get(otp=otp)
             user = User.objects.get(id=otp_obj.user_id)
@@ -91,16 +87,20 @@ class LoginView(APIView):
 
     def post(self, request):
         """
-
         :param request: username and password
         :return: login success or fail.
         """
         try:
-            user = authenticate(username=request.data.get('username'), password=request.data.get('password'))
-            if user is not None:
-                return Response("Login successful..", status=status.HTTP_202_ACCEPTED)
-            else:
-                return Response("username or password is wrong..!", status=status.HTTP_400_BAD_REQUEST)
+            username = request.data.get("username")
+            password = request.data.get("password")
+            user = auth.authenticate(username=username, password=password)
+            if user:
+                encoded_token = EncodeDecodeToken().encode_token(data=user.pk)
+                return Response(
+                    {
+                        "message": "logged in successfully",
+                        "data": {"token": encoded_token}
+                    }, status=status.HTTP_202_ACCEPTED)
 
         except AuthenticationFailed:
             return Response("Exception: Authentication failed..", status=status.HTTP_401_UNAUTHORIZED)

@@ -5,4 +5,3 @@ urlpatterns = [
     path('', BookView.as_view(), name='create')
 ]
 
-
