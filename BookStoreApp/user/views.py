@@ -49,7 +49,7 @@ class RegisterView(APIView):
                 [new_user.email],
                 fail_silently=False
             )
-            return Response({"message": "OTP Sent to the user "}, status=status.HTTP_201_CREATED)
+            return Response({"message": "user register successfully OTP Sent to the user "}, status=status.HTTP_201_CREATED)
         except Exception as e:
             print(e)
             return Response({"Error": "Failed to send otp"}, status=status.HTTP_400_BAD_REQUEST)
